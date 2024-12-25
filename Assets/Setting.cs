@@ -3,18 +3,18 @@ using UnityEngine.UI;
 
 public class Setting : MonoBehaviour
 {
-    float defaultShakeStrength = 75f;
-    float defaultShakeSpeed = 0.2f;
+    readonly float defaultShakeStrength = 75f;
+    readonly float defaultShakeSpeed = 0.2f;
 
-    float defaultparticle1Size = 75f;
-    float defaultparticle1Mass = 0.5f;
-    int defaultparticle1Count = 10;
+    readonly float defaultparticle1Size = 75f;
+    readonly float defaultparticle1Mass = 0.5f;
+    readonly int defaultparticle1Count = 10;
 
-    float defaultparticle2Size = 15f;
-    float defaultparticle2Mass = 0.5f;
-    int defaultparticle2Count = 1000;
+    readonly float defaultparticle2Size = 15f;
+    readonly float defaultparticle2Mass = 0.5f;
+    readonly int defaultparticle2Count = 1000;
 
-    float defaultSimulationPrecision = 20f;
+    readonly float defaultSimulationPrecision = 20f;
 
 
     public Slider shakeStrength;
@@ -64,11 +64,11 @@ public class Setting : MonoBehaviour
         shakeSpeedValue.text = shakeSpeed.value.ToString("F1");
 
         particle1SizeValue.text = particle1Size.value.ToString();
-        particle1MassValue.text = particle1Mass.value.ToString();
+        particle1MassValue.text = particle1Mass.value.ToString("F1");
         particle1CountValue.text = particle1Count.value.ToString();
 
         particle2SizeValue.text= particle2Size.value.ToString();
-        particle2MassValue.text= particle2Mass.value.ToString();
+        particle2MassValue.text= particle2Mass.value.ToString("F1");
         particle2CountValue.text = particle2Count.value.ToString();
 
         simulationPrecisionValue.text = simulationPrecision.value.ToString();

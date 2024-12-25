@@ -22,11 +22,6 @@ public class Shake : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-
-    }
-
     int moveSeq = 0;
 
     void FixedUpdate()

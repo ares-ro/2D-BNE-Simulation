@@ -20,16 +20,6 @@ public class ParticleManagement : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
-
     public static void CreateParticle(float particle1Size, float particle1Mass, int particle1Count, float particle2Size, float particle2Mass, int particle2Count)
     {
         float randomSpawnWidth = instance.shakeArea.GetComponent<RectTransform>().rect.width / 2;
