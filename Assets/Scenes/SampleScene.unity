@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -658,12 +658,12 @@ MonoBehaviour:
   shakeSpeedValue: {fileID: 1969092413}
   particle1Size: {fileID: 1700232008}
   particle1SizeValue: {fileID: 502953185}
-  particle1Density: {fileID: 824131762}
-  particle1DensityValue: {fileID: 1664866966}
+  particle1Mass: {fileID: 824131762}
+  particle1MassValue: {fileID: 1664866966}
   particle2Size: {fileID: 325077655}
   particle2SizeValue: {fileID: 1578886315}
-  particle2Density: {fileID: 272589201}
-  particle2DensityValue: {fileID: 1317623281}
+  particle2Mass: {fileID: 272589201}
+  particle2MassValue: {fileID: 1317623281}
   simulationPrecision: {fileID: 721689952}
   simulationPrecisionValue: {fileID: 890244448}
 --- !u!1 &131427456
@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1203920174}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 3000
+  m_MaxValue: 10
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 902022653}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 3000
+  m_MaxValue: 100
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -1844,7 +1844,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC785\uC790 \uBC00\uB3C4"
+  m_Text: "\uC785\uC790 \uC9C8\uB7C9"
 --- !u!222 &495098754
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2297,9 +2297,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285d7dd9bc9ac5b408c2658ed3d211ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnGo: {fileID: 586147563}
-  circle1: {fileID: 1176855140222858554, guid: 7e4c67e0636e21c498cf5aaf4bd8a453, type: 3}
-  circle2: {fileID: 7682237764039242166, guid: 8585ab62287fe944cacc585346e0b2de, type: 3}
+  spawnArea: {fileID: 586147563}
+  particle1: {fileID: 1176855140222858554, guid: 7e4c67e0636e21c498cf5aaf4bd8a453, type: 3}
+  particle2: {fileID: 7682237764039242166, guid: 8585ab62287fe944cacc585346e0b2de, type: 3}
 --- !u!1 &587577351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2869,7 +2869,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1235046234}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 3000
+  m_MaxValue: 10
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -3331,7 +3331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3504,7 +3504,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 681822328}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 2
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -3772,7 +3772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6284,7 +6284,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1445702929}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 3000
+  m_MaxValue: 100
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -7332,7 +7332,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC785\uC790 \uBC00\uB3C4"
+  m_Text: "\uC785\uC790 \uC9C8\uB7C9"
 --- !u!222 &2071434266
 CanvasRenderer:
   m_ObjectHideFlags: 0

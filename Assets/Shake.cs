@@ -26,7 +26,7 @@ public class Shake : MonoBehaviour
     {
 
     }
-    
+
     int moveSeq = 0;
 
     void FixedUpdate()
@@ -129,5 +129,9 @@ public class Shake : MonoBehaviour
         instance.posSeqList.Add(new Vector2(0, 0));
 
         instance.isRun = isRun;
+    }
+    public static void Stop()
+    {
+        instance.isRun = false;
     }
 }
