@@ -660,10 +660,14 @@ MonoBehaviour:
   particle1SizeValue: {fileID: 502953185}
   particle1Mass: {fileID: 824131762}
   particle1MassValue: {fileID: 1664866966}
+  particle1Count: {fileID: 1074479044}
+  particle1CountValue: {fileID: 1338997505}
   particle2Size: {fileID: 325077655}
   particle2SizeValue: {fileID: 1578886315}
   particle2Mass: {fileID: 272589201}
   particle2MassValue: {fileID: 1317623281}
+  particle2Count: {fileID: 1840999675}
+  particle2CountValue: {fileID: 965480627}
   simulationPrecision: {fileID: 721689952}
   simulationPrecisionValue: {fileID: 890244448}
   simulationStartButton: {fileID: 845847363}
@@ -1135,10 +1139,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1136987340}
   m_HandleRect: {fileID: 1203920174}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 10
-  m_WholeNumbers: 1
-  m_Value: 0
+  m_MinValue: 0.1
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0.1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1440,10 +1444,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1390665427}
   m_HandleRect: {fileID: 902022653}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 1
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2958,10 +2962,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 373960046}
   m_HandleRect: {fileID: 27860921}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 1
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3192,10 +3196,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 131427457}
   m_HandleRect: {fileID: 1235046234}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 10
-  m_WholeNumbers: 1
-  m_Value: 0
+  m_MinValue: 0.1
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0.1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4017,10 +4021,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 329246787}
   m_HandleRect: {fileID: 681822328}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.1
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4505,10 +4509,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 177667165}
   m_HandleRect: {fileID: 2040863580}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 10
+  m_MinValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7188,10 +7192,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 588972095}
   m_HandleRect: {fileID: 1445702929}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 1
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7543,10 +7547,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1339112483}
   m_HandleRect: {fileID: 905779937}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 10
+  m_MinValue: 1
+  m_MaxValue: 1000
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7852,10 +7856,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1368195346}
   m_HandleRect: {fileID: 318423667}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 50
+  m_MinValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
