@@ -3,12 +3,17 @@ using UnityEngine.UI;
 
 public class Setting : MonoBehaviour
 {
-    float defaultShakeStrength = 20f;
-    float defaultShakeSpeed = 0.5f;
-    float defaultparticle1Size = 50f;
-    float defaultparticle1Mass = 1f;
-    float defaultparticle2Size = 10f;
-    float defaultparticle2Mass = 1f;
+    float defaultShakeStrength = 75f;
+    float defaultShakeSpeed = 0.2f;
+
+    float defaultparticle1Size = 75f;
+    float defaultparticle1Mass = 0.5f;
+    int defaultparticle1Count = 10;
+
+    float defaultparticle2Size = 15f;
+    float defaultparticle2Mass = 0.5f;
+    int defaultparticle2Count = 1000;
+
     float defaultSimulationPrecision = 20f;
 
 
@@ -21,21 +26,35 @@ public class Setting : MonoBehaviour
     public Text particle1SizeValue;
     public Slider particle1Mass;
     public Text particle1MassValue;
+    public Slider particle1Count;
+    public Text particle1CountValue;
+
     public Slider particle2Size;
     public Text particle2SizeValue;
     public Slider particle2Mass;
     public Text particle2MassValue;
+    public Slider particle2Count;
+    public Text particle2CountValue;
+
     public Slider simulationPrecision;
     public Text simulationPrecisionValue;
+
+    public Button simulationStartButton;
+    public Button simulationStopButton;
 
     void Start()
     {
         shakeStrength.value = defaultShakeStrength;
         shakeSpeed.value = defaultShakeSpeed;
+
         particle1Size.value = defaultparticle1Size;
         particle1Mass.value = defaultparticle1Mass;
+        particle1Count.value = defaultparticle1Count;
+
         particle2Size.value = defaultparticle2Size;
         particle2Mass.value = defaultparticle2Mass;
+        particle2Count.value = defaultparticle2Count;
+
         simulationPrecision.value = defaultSimulationPrecision;
     }
 
@@ -46,8 +65,12 @@ public class Setting : MonoBehaviour
 
         particle1SizeValue.text = particle1Size.value.ToString();
         particle1MassValue.text = particle1Mass.value.ToString();
+        particle1CountValue.text = particle1Count.value.ToString();
+
         particle2SizeValue.text= particle2Size.value.ToString();
         particle2MassValue.text= particle2Mass.value.ToString();
+        particle2CountValue.text = particle2Count.value.ToString();
+
         simulationPrecisionValue.text = simulationPrecision.value.ToString();
     }
 
@@ -56,13 +79,46 @@ public class Setting : MonoBehaviour
         Physics2D.velocityIterations = (int)simulationPrecision.value;
         Physics2D.positionIterations = (int)simulationPrecision.value;
 
-        Shake.SetAndRun(shakeStrength.value, shakeSpeed.value, true);
-        ParticleManagement.CreateParticle(particle1Size.value, particle1Mass.value, particle2Size.value, particle2Mass.value);
+        Shake.ShakeSet(shakeStrength.value, shakeSpeed.value);
+        Shake.ShakeStart();
+        ParticleManagement.CreateParticle(particle1Size.value, particle1Mass.value, (int)particle1Count.value, particle2Size.value, particle2Mass.value, (int)particle2Count.value);
+
+        shakeStrength.interactable = false;
+        shakeSpeed.interactable = false;
+
+        particle1Size.interactable = false;
+        particle1Mass.interactable = false;
+        particle1Count.interactable = false;
+
+        particle2Size.interactable= false;
+        particle2Mass.interactable = false;
+        particle2Count.interactable = false;
+
+        simulationPrecision.interactable = false;
+        simulationStartButton.interactable = false;
+        
+        simulationStopButton.interactable = true;
     }
 
     public void StopButtonOnClick()
     {
+        Shake.ShakeStop();
         ParticleManagement.DestroyParticle();
-        Shake.Stop();
+
+        shakeStrength.interactable = true;
+        shakeSpeed.interactable = true;
+
+        particle1Size.interactable = true;
+        particle1Mass.interactable = true;
+        particle1Count.interactable = true;
+
+        particle2Size.interactable = true;
+        particle2Mass.interactable = true;
+        particle2Count.interactable = true;
+
+        simulationPrecision.interactable = true;
+        simulationStartButton.interactable = true;
+
+        simulationStopButton.interactable = false;
     }
 }

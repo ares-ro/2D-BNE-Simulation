@@ -113,7 +113,7 @@ public class Shake : MonoBehaviour
         }
     }
 
-    public static void SetAndRun(float shakeStrength, float shakeSpeed, bool isRun)
+    public static void ShakeSet(float shakeStrength, float shakeSpeed)
     {
         instance.shakeStrength = shakeStrength;
         instance.shakeSpeed = shakeSpeed;
@@ -127,10 +127,12 @@ public class Shake : MonoBehaviour
         instance.posSeqList.Add(new Vector2(0, 0));
         instance.posSeqList.Add(new Vector2(0, -shakeStrength));
         instance.posSeqList.Add(new Vector2(0, 0));
-
-        instance.isRun = isRun;
     }
-    public static void Stop()
+    public static void ShakeStart()
+    {
+        instance.isRun = true;
+    }
+    public static void ShakeStop()
     {
         instance.isRun = false;
     }

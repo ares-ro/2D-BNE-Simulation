@@ -6,6 +6,7 @@ public class ParticleManagement : MonoBehaviour
     static ParticleManagement instance;
 
     public GameObject spawnArea;
+    public GameObject shakeArea;
     public GameObject particle1;
     public GameObject particle2;
 
@@ -29,22 +30,25 @@ public class ParticleManagement : MonoBehaviour
         
     }
 
-    public static void CreateParticle(float particle1Size, float particle1Mass, float particle2Size, float particle2Mass)
+    public static void CreateParticle(float particle1Size, float particle1Mass, int particle1Count, float particle2Size, float particle2Mass, int particle2Count)
     {
-        float spreadBias = 400;
+        float randomSpawnWidth = instance.shakeArea.GetComponent<RectTransform>().rect.width / 2;
+        float randomSpawnHeight = instance.shakeArea.GetComponent<RectTransform>().rect.height / 2;
+        randomSpawnWidth -= (100 + (Mathf.Max(particle1Size, particle2Size) / 2));
+        randomSpawnHeight -= (100 + (Mathf.Max(particle1Size, particle2Size) / 2));
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < particle1Count; i++)
         {
             GameObject particleBuffer = Instantiate(instance.particle1, instance.spawnArea.transform);
             instance.particles.Add(particleBuffer);
-            particleBuffer.transform.localPosition = new Vector2(Random.Range(-spreadBias, spreadBias), Random.Range(-spreadBias, spreadBias));
+            particleBuffer.transform.localPosition = new Vector2(Random.Range(-randomSpawnWidth, randomSpawnWidth), Random.Range(-randomSpawnHeight, randomSpawnHeight));
             particleBuffer.GetComponent<ParticleData>().Initialize(particle1Size, particle1Mass);
         }
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < particle2Count; i++)
         {
             GameObject particleBuffer = Instantiate(instance.particle2, instance.spawnArea.transform);
             instance.particles.Add(particleBuffer);
-            particleBuffer.transform.localPosition = new Vector2(Random.Range(-spreadBias, spreadBias), Random.Range(-spreadBias, spreadBias));
+            particleBuffer.transform.localPosition = new Vector2(Random.Range(-randomSpawnWidth, randomSpawnWidth), Random.Range(-randomSpawnHeight, randomSpawnHeight));
             particleBuffer.GetComponent<ParticleData>().Initialize(particle2Size, particle2Mass);
         }
     }
