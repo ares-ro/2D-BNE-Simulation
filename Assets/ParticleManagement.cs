@@ -24,8 +24,8 @@ public class ParticleManagement : MonoBehaviour
     {
         float randomSpawnWidth = instance.shakeArea.GetComponent<RectTransform>().rect.width / 2;
         float randomSpawnHeight = instance.shakeArea.GetComponent<RectTransform>().rect.height / 2;
-        randomSpawnWidth -= (100 + (Mathf.Max(particle1Size, particle2Size) / 2));
-        randomSpawnHeight -= (100 + (Mathf.Max(particle1Size, particle2Size) / 2));
+        randomSpawnWidth -= (Mathf.Max(particle1Size, particle2Size) / 2) - 100;
+        randomSpawnHeight -= (Mathf.Max(particle1Size, particle2Size) / 2) - 100;
 
         for (int i = 0; i < particle1Count; i++)
         {
