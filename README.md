@@ -1,7 +1,7 @@
 # 2D-BNE-Simulation
 ![C#](https://img.shields.io/badge/C%23-68217A?style=flat-square)
-![Unity](https://img.shields.io/badge/Unity-100000?style=flat-square&logo=unity&logoColor=white)
-
+![Unity](https://img.shields.io/badge/Unity-100000?style=flat-square&logo=unity&logoColor=white)  
+![image](https://github.com/ares-ro/2D-BNE-Simulation/blob/main/docs/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EC%9D%8C.png)
 2D 기반의 브라질너트 효과(Brazil Nut Effect) 시뮬레이션 프로그램입니다.  
 조건에 따라 입자 특징 별 차이를 시뮬레이션 할 수 있습니다.
 
