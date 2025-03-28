@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.RenderGraphModule;
 
 public class ParticleManagement : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class ParticleManagement : MonoBehaviour
     public GameObject shakeArea;
     public GameObject particle1;
     public GameObject particle2;
+
+    public GameObject frameLeft;
+    public GameObject frameRight;
+    public GameObject frameBottom;
 
     List<GameObject> particles = new List<GameObject>();
 
@@ -24,8 +29,12 @@ public class ParticleManagement : MonoBehaviour
     {
         float randomSpawnWidth = instance.shakeArea.GetComponent<RectTransform>().rect.width / 2;
         float randomSpawnHeight = instance.shakeArea.GetComponent<RectTransform>().rect.height / 2;
-        randomSpawnWidth -= (Mathf.Max(particle1Size, particle2Size) / 2) - 100;
-        randomSpawnHeight -= (Mathf.Max(particle1Size, particle2Size) / 2) - 100;
+        Debug.Log(randomSpawnWidth);
+        Debug.Log(randomSpawnHeight);
+        randomSpawnWidth -= (Mathf.Max(particle1Size, particle2Size) / 2) + ((instance.frameLeft.GetComponent<RectTransform>().rect.width + instance.frameRight.GetComponent<RectTransform>().rect.width) / 2) ;
+        randomSpawnHeight -= (Mathf.Max(particle1Size, particle2Size) / 2) + ((instance.frameBottom.GetComponent<RectTransform>().rect.height * 2) / 2);
+        Debug.Log(randomSpawnWidth);
+        Debug.Log(randomSpawnHeight);
 
         for (int i = 0; i < particle1Count; i++)
         {

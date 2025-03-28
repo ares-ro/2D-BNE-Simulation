@@ -10,6 +10,7 @@ public class Shake : MonoBehaviour
     float shakeStrength = 0;
     float shakeSpeed = 0;
     bool isRun = false;
+    Vector2 defaultPos;
 
     List<Vector2> posSeqList = new List<Vector2>();
     float lerpCut = 0.01f;
@@ -122,6 +123,8 @@ public class Shake : MonoBehaviour
         instance.posSeqList.Add(new Vector2(0, 0));
         instance.posSeqList.Add(new Vector2(0, -shakeStrength));
         instance.posSeqList.Add(new Vector2(0, 0));
+
+        instance.defaultPos = instance.gameObject.transform.position;
     }
     public static void ShakeStart()
     {
@@ -130,5 +133,7 @@ public class Shake : MonoBehaviour
     public static void ShakeStop()
     {
         instance.isRun = false;
+        instance.moveSeq = 0;
+        instance.gameObject.transform.position = instance.defaultPos;
     }
 }

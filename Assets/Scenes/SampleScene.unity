@@ -2483,6 +2483,9 @@ MonoBehaviour:
   shakeArea: {fileID: 1135429891}
   particle1: {fileID: 1176855140222858554, guid: 7e4c67e0636e21c498cf5aaf4bd8a453, type: 3}
   particle2: {fileID: 7682237764039242166, guid: 8585ab62287fe944cacc585346e0b2de, type: 3}
+  frameLeft: {fileID: 18687760}
+  frameRight: {fileID: 933211501}
+  frameBottom: {fileID: 1034639130}
 --- !u!1 &587577351
 GameObject:
   m_ObjectHideFlags: 0
